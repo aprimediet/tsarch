@@ -1,1 +1,1 @@
-# Typescript Backend for Automate
+# Express.js backend with typescript, mongoose
