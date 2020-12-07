@@ -1,11 +1,9 @@
-import { Inject, Injectable } from 'injection-js';
-import User from '@models/user';
 import { IUserDocument } from '@interfaces/user';
-import { Model, Query } from 'mongoose';
+import { Query } from 'mongoose';
+import User from '@models/user';
 
-@Injectable()
 export class UserRepo {
-  constructor(@Inject(User) private model: Model<IUserDocument>) {}
+  model = User;
 
   async list(): Promise<Query<IUserDocument[], IUserDocument>> {
     return await this.model.find();
