@@ -1,5 +1,5 @@
 import { app } from '@app/app';
-import * as request from 'supertest';
+import request from 'supertest';
 
 describe('Root', () => {
   it('Should return hello world on /', async () => {

@@ -1,3 +1,10 @@
 node_modules
 .DS_Store
+.env
 dist
+logs/*
+!logs/.gitkeep
+uploads/*
+!uploads/.gitkeep
+jest-mongodb-config.js
+jest.config.js

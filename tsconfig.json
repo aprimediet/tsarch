@@ -12,6 +12,14 @@
     "outDir": "./dist",
     "incremental": true,
     "allowJs": true,
-    "strict": true
+    "strict": true,
+    "esModuleInterop": true
   },
+  "exclude": [
+    "node_modules",
+    "jest*",
+    "dist",
+    "logs",
+    "uploads",
+  ]
 }

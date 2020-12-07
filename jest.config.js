@@ -1,4 +1,15 @@
+const { pathsToModuleNameMapper } = require('ts-jest/utils');
+const { compilerOptions } = require('./tsconfig.alias.json');
+
 module.exports = {
+  globals: {
+    'ts-jest': {
+      tsConfig: 'tsconfig.json',
+      diagnostics: {
+        warnOnly: true,
+      },
+    },
+  },
   preset: '@shelf/jest-mongodb',
   clearMocks: true,
   roots: ['<rootDir>/src'],
@@ -7,7 +18,5 @@ module.exports = {
   transform: {
     '^.+\\.(ts|tsx)$': 'ts-jest',
   },
-  moduleNameMapper: {
-    '@app/(.*)': '<rootDir>/src/$1',
-  },
+  moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths, { prefix: '<rootDir>/src/' }),
 };

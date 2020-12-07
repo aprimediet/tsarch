@@ -1,6 +1,6 @@
 import { Inject, Injectable } from 'injection-js';
 import User from '@models/user';
-import { IUserDocument } from '@app/interfaces/user';
+import { IUserDocument } from '@interfaces/user';
 import { Model, Query } from 'mongoose';
 
 @Injectable()
