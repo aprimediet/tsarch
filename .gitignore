@@ -2,3 +2,7 @@ node_modules
 .DS_Store
 .env
 dist
+logs/*
+!logs/.gitkeep
+uploads/*
+!uploads/.gitkeep
