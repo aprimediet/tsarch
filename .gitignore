@@ -7,3 +7,5 @@ logs/*
 uploads/*
 !uploads/.gitkeep
 yarn-error*.log
+__snapshots__
+globalConfig.json
