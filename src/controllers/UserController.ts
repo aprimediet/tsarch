@@ -1,14 +1,14 @@
-import { THttpListResult } from '@interfaces/http';
-import { IUserDocument } from '@interfaces/user';
+import { THttpListResponse } from '@interfaces/http';
+import { TUser } from '@interfaces/user';
 import { UserRepo } from '@repos/UserRepo';
-import { Controller, Get } from 'routing-controllers';
+import { Get, JsonController } from 'routing-controllers';
 
-@Controller('/users')
+@JsonController('/users')
 export class UserController {
   userRepo = new UserRepo();
 
   @Get('/')
-  async list(): Promise<THttpListResult<IUserDocument>> {
+  async list(): Promise<THttpListResponse<TUser>> {
     const data = await this.userRepo.list();
 
     return {

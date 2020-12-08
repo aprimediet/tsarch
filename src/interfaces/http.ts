@@ -1,3 +1,3 @@
-export type THttpListResult<T> = {
+export type THttpListResponse<T> = {
   data: T[];
 };
